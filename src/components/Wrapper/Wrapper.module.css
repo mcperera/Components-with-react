@@ -1,6 +1,8 @@
 .wrapperContainer {
-  width: 75rem;
+  width: 75vw;
   margin: 0 auto;
+
+  z-index: 10;
 
   /* border: 1px solid black; */
 }

@@ -9,6 +9,7 @@ import {
   loginBtn,
   btnIcon,
   btnText,
+  pageTitle,
 } from "./Login.module.css";
 
 function Login() {
@@ -17,7 +18,7 @@ function Login() {
   return (
     <div className={loginWrapper}>
       <div className={container}>
-        <h1>- CoMponents -</h1>
+        <h1 className={pageTitle}>- CoMponents -</h1>
         <div className={loginBtn} onClick={() => dispatch(signIn(redirect))}>
           <span className={btnIcon} />
           <span className={btnText}>Sign in with Google</span>

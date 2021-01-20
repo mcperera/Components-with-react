@@ -1,16 +1,45 @@
 .headerWrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   height: 100px;
   width: 100%;
+  padding: 15px 20px;
 
   border: 1px solid transparent;
+  border-radius: 0 0 5px 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  color: white;
 }
 
-button {
-  margin-top: 10px;
+.logo {
+  letter-spacing: 10px;
+}
+
+.userContainer {
+  display: grid;
+}
+
+.userDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .avatarCircle {
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+} */
+
+.avatarCircle {
+  margin: 10px;
+  /* border-radius: 50%; */
+}
+
+.avatarCircle > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }

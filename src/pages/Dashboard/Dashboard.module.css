@@ -1,5 +1,25 @@
 .dashboardWrapper {
-  display: grid;
-  /* place-items: center; */
+  /* display: grid;
+  grid-template-rows: 1fr 5fr;
+  place-items: center; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
+}
+
+.mainContainer {
+  height: calc(100vh - 120px);
+  width: 100%;
+}
+
+.mainContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-color: teal;
 }
