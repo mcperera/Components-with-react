@@ -28,18 +28,33 @@
   align-items: center;
 }
 
-/* .avatarCircle {
-  border: 1px solid transparent;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-} */
-
 .avatarCircle {
   margin: 10px;
-  /* border-radius: 50%; */
 }
 
 .avatarCircle > img {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  .headerWrapper {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    letter-spacing: 1vw;
+    font-size: 10px;
+  }
+
+  .userDetails {
+    font-size: 0.8rem;
+  }
+
+  .avatarCircle > img {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+  }
 }

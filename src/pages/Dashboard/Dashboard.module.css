@@ -1,7 +1,4 @@
 .dashboardWrapper {
-  /* display: grid;
-  grid-template-rows: 1fr 5fr;
-  place-items: center; */
   position: relative;
   display: flex;
   flex-direction: column;
