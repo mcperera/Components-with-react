@@ -1,5 +1,5 @@
 import React from "react";
-import { signOut } from "../store/actionCreators/user";
+import { signOut } from "../../store/actionCreators/user";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
