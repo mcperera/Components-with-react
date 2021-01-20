@@ -29,12 +29,24 @@
 }
 
 .avatarCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin: 10px 0 10px 10px;
+  padding: 1px;
+  border-radius: 50%;
+
+  transition: all 0.3s;
+}
+
+.avatarCircle:hover {
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
 }
 
 .avatarCircle > img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
@@ -50,9 +62,6 @@
 
   .userDetails {
     font-size: 0.8rem;
-  }
-  .avatarCircle {
-    margin: 10px 0 10px 10px;
   }
 
   .avatarCircle > img {
