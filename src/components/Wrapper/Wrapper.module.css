@@ -1,5 +1,7 @@
 .wrapperContainer {
+  position: relative;
   width: 75vw;
+  height: 100%;
   margin: 0 auto;
 
   z-index: 10;

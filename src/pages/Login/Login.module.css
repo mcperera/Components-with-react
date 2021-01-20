@@ -28,7 +28,7 @@
   justify-items: center;
   align-items: center;
 
-  height: 40px;
+  height: 45px;
   width: 250px;
   padding: 5px 10px;
 
@@ -36,14 +36,14 @@
   font-weight: 400;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--dark-shadow);
 
   cursor: pointer;
   transition: all 0.3s linear;
 }
 
 .loginBtn:hover {
-  background-color: rgb(182, 223, 223);
+  background-color: hsl(185deg 62% 45%);
   color: white;
 }
 
