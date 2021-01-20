@@ -18,13 +18,13 @@
 
 .loginBtn {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 5fr;
   grid-column-gap: 5px;
   justify-items: center;
   align-items: center;
 
   height: 40px;
-  width: 160px;
+  width: 250px;
   padding: 5px 10px;
 
   color: rgb(80, 175, 175);

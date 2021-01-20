@@ -17,10 +17,10 @@ function Login() {
   return (
     <div className={loginWrapper}>
       <div className={container}>
-        <h1>Components</h1>
+        <h1>- CoMponents -</h1>
         <div className={loginBtn} onClick={() => dispatch(signIn(redirect))}>
           <span className={btnIcon} />
-          <span className={btnText}>Google</span>
+          <span className={btnText}>Sign in with Google</span>
         </div>
       </div>
     </div>
