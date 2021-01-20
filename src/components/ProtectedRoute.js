@@ -4,13 +4,11 @@ import { useSelector } from "react-redux";
 
 function ProtectedRoute({ component: Component, ...rest }) {
   const { user } = useSelector((state) => state.user);
-  console.log("ProtectedRoute-->", user);
   return (
     <Route
       {...rest}
       render={(props) => {
         if (user !== null) {
-          console.log("true -->", user);
           return <Component {...props} />;
         } else {
           return (

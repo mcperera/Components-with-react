@@ -1,0 +1,59 @@
+.loginWrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+
+  height: 25%;
+  width: 25%;
+  padding: 10px;
+}
+
+.loginBtn {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+
+  height: 40px;
+  width: 160px;
+  padding: 5px 10px;
+
+  color: rgb(80, 175, 175);
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.loginBtn:hover {
+  background-color: rgb(182, 223, 223);
+  color: white;
+}
+
+.btnIcon {
+  height: 100%;
+  width: 100%;
+
+  background: url("../../assets/images/icons/google-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btnText {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
