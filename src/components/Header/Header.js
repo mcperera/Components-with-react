@@ -11,6 +11,7 @@ import {
   userContainer,
   userDetails,
   avatarCircle,
+  dropdown,
 } from "./Header.module.css";
 
 function Header() {
@@ -32,9 +33,11 @@ function Header() {
             <h3>Hi, {displayName.split(" ")[0]}</h3>
             <div className={avatarCircle}>
               <img src={photoURL} alt={displayName} />
+              <ul className={dropdown}>
+                <li onClick={() => dispatch(signOut(history))}>Sign Out</li>
+              </ul>
             </div>
           </div>
-          <button onClick={() => dispatch(signOut(history))}>SignOut</button>
         </div>
       </header>
     </Wrapper>

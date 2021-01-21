@@ -1,12 +1,12 @@
 .wrapperContainer {
-  position: relative;
   width: 75vw;
   height: 100%;
   margin: 0 auto;
 
-  z-index: 10;
-
+  /* <---Test--> */
+  /* position: relative; */
   /* border: 1px solid black; */
+  /* z-index: 10; */
 }
 
 @media screen and (max-width: 480px) {
