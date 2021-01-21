@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Header, MainContainer } from "../../components";
+import {
+  Header,
+  MainContainer,
+  CompContainer,
+  DescContainer,
+} from "../../components";
 
 import { dashboardWrapper, mainContainer } from "./Dashboard.module.css";
 
@@ -9,7 +14,10 @@ function Dashboard() {
     <div className={dashboardWrapper}>
       <Header />
       <main className={mainContainer}>
-        <MainContainer />
+        <MainContainer>
+          <CompContainer />
+          <DescContainer />
+        </MainContainer>
       </main>
     </div>
   );

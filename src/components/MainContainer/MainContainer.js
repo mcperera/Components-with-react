@@ -4,10 +4,10 @@ import { Wrapper } from "../";
 
 import { mainContainer } from "./MainContainer.module.css";
 
-function MainContainer() {
+function MainContainer({ children }) {
   return (
     <Wrapper>
-      <div className={mainContainer}></div>
+      <div className={mainContainer}>{children}</div>
     </Wrapper>
   );
 }
