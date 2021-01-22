@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  Dashboard,
-  MainContainer,
-  CompContainer,
-  DescContainer,
-} from "../../components";
+import { MainContainer, CompContainer, DescContainer } from "../../components";
 
 function ReactCompo() {
   return (

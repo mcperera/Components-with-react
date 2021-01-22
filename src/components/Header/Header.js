@@ -4,10 +4,11 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../../store/actionCreators/user";
 
-import { Wrapper } from "../";
+import { Nav, Wrapper } from "../";
 
 import {
   headerWrapper,
+  headerContent,
   logo,
   userContainer,
   userDetails,
@@ -25,12 +26,12 @@ function Header() {
   return (
     <Wrapper>
       <header className={headerWrapper}>
-        <div className={logo}>
-          <h2>-CoMponents-</h2>
+        <div className={headerContent}>
+          <div className={logo}>
+            <h2>-CoMponents-</h2>
+          </div>
         </div>
         <div className={userContainer}>
-          <Link to="/">Home</Link>
-          <Link to="/react">React</Link>
           <div className={userDetails}>
             <h3>Hi, {displayName.split(" ")[0]}</h3>
             <div className={avatarCircle}>
@@ -41,6 +42,14 @@ function Header() {
             </div>
           </div>
         </div>
+        <Nav>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/react">React</Link>
+          </li>
+        </Nav>
       </header>
     </Wrapper>
   );

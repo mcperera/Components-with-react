@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard/Dashboard";
 import DescContainer from "./DescContainer/DescContainer";
 import Header from "./Header/Header";
 import MainContainer from "./MainContainer/MainContainer";
+import Nav from "./Nav/Nav";
 import Wrapper from "./Wrapper/Wrapper";
 
 export {
@@ -11,5 +12,6 @@ export {
   DescContainer,
   Header,
   MainContainer,
+  Nav,
   Wrapper,
 };

@@ -1,0 +1,35 @@
+.navWrapper {
+  display: flex;
+  justify-content: start;
+
+  height: 100%;
+  width: 100%;
+
+  padding-left: 10px;
+  /* border: 1px solid white; */
+}
+
+.navItems {
+  display: flex;
+}
+
+.navItems > li {
+  list-style: none;
+
+  width: 50px;
+  margin: 0 10px;
+  text-align: center;
+
+  /* border: 1px solid white; */
+}
+
+.navItems > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .navWrapper {
+    padding-left: 0;
+  }
+}
