@@ -49,6 +49,9 @@ function Header() {
           <li>
             <Link to="/react">React</Link>
           </li>
+          <li>
+            <Link to="/css">CSS</Link>
+          </li>
         </Nav>
       </header>
     </Wrapper>

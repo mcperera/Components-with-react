@@ -6,7 +6,6 @@
   width: 100%;
 
   padding-left: 10px;
-  /* border: 1px solid white; */
 }
 
 .navItems {
@@ -16,16 +15,33 @@
 .navItems > li {
   list-style: none;
 
-  width: 50px;
-  margin: 0 10px;
-  text-align: center;
+  height: max-content;
+  width: max-content;
+  margin: 0 5px;
+  padding: 5px 0;
 
-  /* border: 1px solid white; */
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+}
+
+/* --> For Active link
+
+.activeItem {
+  box-shadow: var(--dark-shadow);
+}
+
+<-- */
+
+.navItems > li:hover {
+  box-shadow: var(--dark-shadow);
 }
 
 .navItems > li > a {
   text-decoration: none;
   color: white;
+
+  padding: 5px 10px;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {
