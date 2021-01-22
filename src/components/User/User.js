@@ -3,11 +3,13 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../../store/actionCreators/user";
 
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+
 import {
   userContainer,
   userDetails,
   avatarCircle,
-  dropdown,
+  signOutIcon,
 } from "./User.module.css";
 
 function User() {
@@ -21,11 +23,11 @@ function User() {
     <div className={userContainer}>
       <div className={userDetails}>
         <p>Hi, {displayName.split(" ")[0]}</p>
-        <div className={avatarCircle}>
+        <div
+          className={avatarCircle}
+          onClick={() => dispatch(signOut(history))}>
           <img src={photoURL} alt={displayName} />
-          <ul className={dropdown}>
-            <li onClick={() => dispatch(signOut(history))}>Sign Out</li>
-          </ul>
+          <ExitToAppIcon className={signOutIcon} />
         </div>
       </div>
     </div>
