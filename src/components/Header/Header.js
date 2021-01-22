@@ -1,20 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { signOut } from "../../store/actionCreators/user";
 
-import { Nav, Wrapper } from "../";
+import { Nav, Wrapper, Logo, User } from "../";
 
-import {
-  headerWrapper,
-  headerContent,
-  logo,
-  userContainer,
-  userDetails,
-  avatarCircle,
-  dropdown,
-} from "./Header.module.css";
+import { headerWrapper } from "./Header.module.css";
 
 const pageLinks = [
   {
@@ -32,12 +21,6 @@ const pageLinks = [
 ];
 
 function Header() {
-  const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-  const history = useHistory();
-
-  const { displayName, photoURL } = user;
-
   const links = pageLinks.map((link, index) => {
     return (
       <li key={index}>
@@ -51,22 +34,8 @@ function Header() {
   return (
     <Wrapper>
       <header className={headerWrapper}>
-        <div className={headerContent}>
-          <div className={logo}>
-            <h2>-CoMponents-</h2>
-          </div>
-        </div>
-        <div className={userContainer}>
-          <div className={userDetails}>
-            <p>Hi, {displayName.split(" ")[0]}</p>
-            <div className={avatarCircle}>
-              <img src={photoURL} alt={displayName} />
-              <ul className={dropdown}>
-                <li onClick={() => dispatch(signOut(history))}>Sign Out</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Logo />
+        <User />
         <Nav>{links}</Nav>
       </header>
     </Wrapper>

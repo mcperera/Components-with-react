@@ -13,8 +13,6 @@ import {
 function Dashboard({ children }) {
   const { pathname } = useLocation();
 
-  console.log(pathname);
-
   // Ternary Operators --> lol
   const pageStyle =
     pathname === "/"

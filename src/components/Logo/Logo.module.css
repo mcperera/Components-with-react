@@ -1,0 +1,17 @@
+.logoWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+
+  letter-spacing: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .logoWrap {
+    padding: 0 10px;
+    letter-spacing: 1vw;
+    font-size: 10px;
+  }
+}
