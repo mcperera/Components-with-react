@@ -36,6 +36,7 @@
   justify-content: flex-end;
   align-items: center;
 
+  text-align: center;
   padding: 0 20px;
 }
 
@@ -70,7 +71,7 @@
   right: 0;
 
   /* height: 150px; */
-  width: 150px;
+  width: 130px;
   padding: 2px;
 
   color: black;
@@ -127,5 +128,9 @@
     height: 34px;
     width: 34px;
     border-radius: 50%;
+  }
+
+  .dropdown {
+    width: 100px;
   }
 }

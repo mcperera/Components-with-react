@@ -20,16 +20,18 @@ main:before {
   width: 100%;
 
   z-index: -1;
+
+  transition: all 0.5s linear;
 }
 
 .homeStyle:before {
-  background-color: var(--clr-primary-1);
+  background-color: #09476b;
 }
 
 .reactStyle:before {
-  background-color: darkcyan;
+  background-color: #0c5986;
 }
 
 .cssStyle:before {
-  background-color: cadetblue;
+  background-color: #0e6aa0;
 }
