@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../../store/actionCreators/user";
@@ -16,12 +16,37 @@ import {
   dropdown,
 } from "./Header.module.css";
 
+const pageLinks = [
+  {
+    to: "/",
+    label: "Home",
+  },
+  {
+    to: "/react",
+    label: "React",
+  },
+  {
+    to: "/css",
+    label: "CSS",
+  },
+];
+
 function Header() {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
   const { displayName, photoURL } = user;
+
+  const links = pageLinks.map((link, index) => {
+    return (
+      <li key={index}>
+        <NavLink exact to={link.to} activeStyle={{ color: "red" }}>
+          {link.label}
+        </NavLink>
+      </li>
+    );
+  });
 
   return (
     <Wrapper>
@@ -42,17 +67,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <Nav>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/react">React</Link>
-          </li>
-          <li>
-            <Link to="/css">CSS</Link>
-          </li>
-        </Nav>
+        <Nav>{links}</Nav>
       </header>
     </Wrapper>
   );
