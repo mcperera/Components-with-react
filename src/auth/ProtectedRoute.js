@@ -3,7 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function ProtectedRoute({ component: Component, children, ...rest }) {
-  //We can use Component without children
+  //We can use Component instead of children unless we pass as "component" props
   const { user } = useSelector((state) => state.user);
   return (
     <Route

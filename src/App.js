@@ -1,12 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Dashboard from "./components/Dashboard/Dashboard";
-
-import ProtectedRoute from "./components/ProtectedRoute";
-import Login from "./pages/Login/Login";
-import Home from "./pages/Home/Home";
-import ReactCompo from "./pages/ReactCompo/ReactCompo";
+import ProtectedRoute from "./auth/ProtectedRoute";
+import { Login, Home, ReactCompo } from "./pages";
+import { Dashboard } from "./components";
 
 import "./App.css";
 
