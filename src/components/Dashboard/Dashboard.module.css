@@ -18,7 +18,18 @@ main:before {
   left: 0;
   height: 40%;
   width: 100%;
-  background-color: var(--clr-primary-1);
 
   z-index: -1;
+}
+
+.homeStyle:before {
+  background-color: var(--clr-primary-1);
+}
+
+.reactStyle:before {
+  background-color: darkcyan;
+}
+
+.cssStyle:before {
+  background-color: cadetblue;
 }
