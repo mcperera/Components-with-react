@@ -80,8 +80,14 @@
 
 @media screen and (max-width: 480px) {
   .userDetails {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
     padding: 0 10px;
     font-size: 0.8rem;
+
+    text-align: end;
   }
 
   .avatarCircle > img {

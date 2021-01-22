@@ -8,11 +8,15 @@ import {
 } from "../../components";
 
 function ReactCompo() {
+  let testItems = [];
+
+  for (var i = 0; i < 10; i++) {
+    testItems.push(<Item key={i} />);
+  }
+
   return (
     <MainContainer>
-      <CompContainer>
-        <Item />
-      </CompContainer>
+      <CompContainer>{testItems}</CompContainer>
       <DescContainer>React Description</DescContainer>
     </MainContainer>
   );

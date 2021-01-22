@@ -1,11 +1,41 @@
 .itemContainer {
   display: grid;
-  grid-template-columns: 150px auto 50px;
+  grid-template-columns: 150px auto 20px;
   grid-template-rows: 130px;
   gap: 15px;
+
   align-items: center;
 
   height: 150px;
+  width: 100%;
+
+  padding: 10px;
+  border-radius: var(--radius);
+  /* border: 1px solid black; */
+}
+
+.itemContainer:hover {
+  background-color: rgba(37, 171, 180, 0.1);
+}
+
+.previewBox {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.previewBox > img {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.itemDetails {
+  position: relative;
+  height: 100%;
   width: 100%;
 
   padding: 10px;
@@ -13,23 +43,56 @@
   /* border: 1px solid black; */
 }
 
-.testDive1 {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(37, 171, 180);
+.itemDetails > h3 {
+  margin-bottom: 10px;
 }
 
-.testDive1 > img {
-  height: 100%;
-  width: 100%;
-
-  object-fit: contain;
+.itemDetails > p {
+  margin-bottom: 10px;
 }
 
-.testDive {
-  height: 100%;
-  width: 100%;
+.linksWrapper {
+  position: absolute;
 
-  background-color: rgb(110, 125, 126);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 35px;
+  width: 75px;
+
+  bottom: 5px;
+  left: 5px;
+
+  /* border: 1px solid black; */
+}
+
+.linksWrapper > svg {
   cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.icon > svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .itemContainer {
+    grid-template-columns: 100px auto 20px;
+    grid-template-rows: 130px;
+    gap: 5px;
+  }
+
+  .previewBox > img {
+    height: 100px;
+  }
 }

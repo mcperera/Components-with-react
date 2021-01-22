@@ -5,3 +5,10 @@
   height: 100%;
   width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    grid-template-columns: auto;
+    gap: 0px;
+  }
+}

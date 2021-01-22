@@ -1,18 +1,36 @@
 import React from "react";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LaunchIcon from "@material-ui/icons/Launch";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-import { itemContainer, testDive1, testDive } from "./Item.module.css";
+import {
+  itemContainer,
+  previewBox,
+  itemDetails,
+  linksWrapper,
+  icon,
+} from "./Item.module.css";
 
 function Item() {
   return (
     <div className={itemContainer}>
-      <div className={testDive1}>
+      <div className={previewBox}>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCIA-LAL-oksgjO8VCfHzrmnAjISV4riXquw&usqp=CAU"
+          src="https://lh3.googleusercontent.com/proxy/oeDAU-pHrYsuNNxmzykAG4hGxZGUku4WU3wQ-fFdlx6yJTCm_ys8eHrsn8sY4ewFKJOJQpTgOUOz34H1oNF3GoSbroSJfK2biMTlfxagfJiM4sMbzbLXU6JPcN7k1w"
           alt="dummy"
         />
       </div>
-      <div className={testDive}></div>
-      <p>Details</p>
+      <div className={itemDetails}>
+        <h3>Component Name</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div className={linksWrapper}>
+          <GitHubIcon />
+          <LaunchIcon />
+        </div>
+      </div>
+      <div className={icon}>
+        <ArrowForwardIosIcon />
+      </div>
     </div>
   );
 }
