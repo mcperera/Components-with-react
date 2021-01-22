@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../../store/actionCreators/user";
@@ -21,7 +22,6 @@ function Header() {
 
   const { displayName, photoURL } = user;
 
-  console.log(user);
   return (
     <Wrapper>
       <header className={headerWrapper}>
@@ -29,6 +29,8 @@ function Header() {
           <h2>-CoMponents-</h2>
         </div>
         <div className={userContainer}>
+          <Link to="/">Home</Link>
+          <Link to="/react">React</Link>
           <div className={userDetails}>
             <h3>Hi, {displayName.split(" ")[0]}</h3>
             <div className={avatarCircle}>
