@@ -1,12 +1,17 @@
 import React from "react";
 
-import { MainContainer, CompContainer, DescContainer } from "../../components";
+import {
+  MainContainer,
+  CompContainer,
+  DescContainer,
+  Item,
+} from "../../components";
 
 function ReactCompo() {
   return (
     <MainContainer>
       <CompContainer>
-        <h1>React Componets</h1>
+        <Item />
       </CompContainer>
       <DescContainer>React Description</DescContainer>
     </MainContainer>

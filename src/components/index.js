@@ -1,6 +1,7 @@
 import CompContainer from "./CompContainer/CompContainer";
 import Dashboard from "./Dashboard/Dashboard";
 import DescContainer from "./DescContainer/DescContainer";
+import Item from "./Item/Item";
 import Header from "./Header/Header";
 import Logo from "./Logo/Logo";
 import MainContainer from "./MainContainer/MainContainer";
@@ -12,6 +13,7 @@ export {
   CompContainer,
   Dashboard,
   DescContainer,
+  Item,
   Header,
   Logo,
   MainContainer,
