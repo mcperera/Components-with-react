@@ -11,7 +11,7 @@ import {
   icon,
 } from "./Item.module.css";
 
-function Item({ id }) {
+function Item({ id, title, handleItemDesc }) {
   return (
     <div className={itemContainer}>
       <div className={previewBox}>
@@ -21,14 +21,14 @@ function Item({ id }) {
         />
       </div>
       <div className={itemDetails}>
-        <h3>{`${id}. `}Component Name</h3>
+        <h3>{`${id}. ${title}`}</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className={linksWrapper}>
           <GitHubIcon />
           <LaunchIcon />
         </div>
       </div>
-      <div className={icon}>
+      <div className={icon} onClick={() => handleItemDesc()}>
         <ArrowForwardIosIcon />
       </div>
     </div>

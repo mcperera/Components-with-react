@@ -1,12 +1,12 @@
 import React from "react";
 
-import { descTest } from "./ItemDetail.module.css";
+import { itemTitle, descContainer } from "./ItemDetail.module.css";
 
-function ItemDetail({ id }) {
+function ItemDetail({ id, title }) {
   return (
     <>
-      <h2>Component Name</h2>
-      <div className={descTest}>
+      <h2 className={itemTitle}>{`${id}. ${title}`}</h2>
+      <div className={descContainer}>
         <img
           src="https://lh3.googleusercontent.com/proxy/oeDAU-pHrYsuNNxmzykAG4hGxZGUku4WU3wQ-fFdlx6yJTCm_ys8eHrsn8sY4ewFKJOJQpTgOUOz34H1oNF3GoSbroSJfK2biMTlfxagfJiM4sMbzbLXU6JPcN7k1w"
           alt="dummy"
