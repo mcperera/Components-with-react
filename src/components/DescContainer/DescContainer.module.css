@@ -7,4 +7,6 @@
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: var(--dark-shadow);
+
+  overflow: auto;
 }

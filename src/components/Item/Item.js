@@ -11,7 +11,7 @@ import {
   icon,
 } from "./Item.module.css";
 
-function Item() {
+function Item({ id }) {
   return (
     <div className={itemContainer}>
       <div className={previewBox}>
@@ -21,7 +21,7 @@ function Item() {
         />
       </div>
       <div className={itemDetails}>
-        <h3>Component Name</h3>
+        <h3>{`${id}. `}Component Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className={linksWrapper}>
           <GitHubIcon />

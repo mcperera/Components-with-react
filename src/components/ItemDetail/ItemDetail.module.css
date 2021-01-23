@@ -1,0 +1,29 @@
+h2 {
+  text-align: center;
+}
+
+.descTest {
+  height: -moz-calc(100% - 40px);
+  height: -webkit-calc(100% - 40px);
+  height: calc(100% - 40px);
+
+  width: 100%;
+
+  padding: 10px 2vw 0 2vw;
+  text-align: center;
+
+  overflow: auto;
+}
+
+.descTest > img {
+  height: auto;
+  width: 80%;
+
+  margin: 10px auto;
+
+  object-fit: contain;
+}
+
+.descTest > p {
+  margin: 10px 0;
+}

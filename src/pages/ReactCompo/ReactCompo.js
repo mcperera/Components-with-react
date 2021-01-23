@@ -5,19 +5,22 @@ import {
   CompContainer,
   DescContainer,
   Item,
+  ItemDetail,
 } from "../../components";
 
 function ReactCompo() {
   let testItems = [];
 
   for (var i = 0; i < 10; i++) {
-    testItems.push(<Item key={i} />);
+    testItems.push(<Item key={i} id={i + 1} />);
   }
 
   return (
     <MainContainer>
       <CompContainer>{testItems}</CompContainer>
-      <DescContainer>React Description</DescContainer>
+      <DescContainer>
+        <ItemDetail />
+      </DescContainer>
     </MainContainer>
   );
 }
