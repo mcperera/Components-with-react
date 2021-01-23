@@ -13,23 +13,23 @@ import { scrollContainer } from "./ReactCompo.module.css";
 const itemList = [
   {
     id: 1,
-    title: "Component 1 -->",
+    title: "React Component Name",
   },
   {
     id: 2,
-    title: "Component 2 -->",
+    title: "React Component Name",
   },
   {
     id: 3,
-    title: "Component 3 -->",
+    title: "React Component Name",
   },
   {
     id: 4,
-    title: "Component 4 -->",
+    title: "React Component Name",
   },
   {
     id: 5,
-    title: "Component 5 -->",
+    title: "React Component Name",
   },
 ];
 
