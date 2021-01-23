@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.icon {
+.moreArrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,8 +82,12 @@
   cursor: pointer;
 }
 
-.icon > svg {
+.moreArrow > svg {
   font-size: 1.2rem;
+}
+
+.moreArrow > svg:hover {
+  color: rgb(0, 183, 255);
 }
 
 @media screen and (max-width: 480px) {
@@ -95,5 +99,13 @@
 
   .previewBox > img {
     height: 100px;
+  }
+
+  .itemDetails > h3 {
+    font-size: 1rem;
+  }
+
+  .itemDetails > p {
+    font-size: 0.9rem;
   }
 }

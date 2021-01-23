@@ -8,7 +8,7 @@ import {
   previewBox,
   itemDetails,
   linksWrapper,
-  icon,
+  moreArrow,
 } from "./Item.module.css";
 
 function Item({ id, title, handleItemDesc }) {
@@ -28,7 +28,7 @@ function Item({ id, title, handleItemDesc }) {
           <LaunchIcon />
         </div>
       </div>
-      <div className={icon} onClick={() => handleItemDesc()}>
+      <div className={moreArrow} onClick={() => handleItemDesc()}>
         <ArrowForwardIosIcon />
       </div>
     </div>
