@@ -8,7 +8,9 @@
 
 @media screen and (max-width: 480px) {
   .mainContainer {
-    grid-template-columns: auto;
-    gap: 0px;
+    grid-template-columns: repeat(2, 100%);
+    gap: 20px;
+
+    overflow: auto;
   }
 }

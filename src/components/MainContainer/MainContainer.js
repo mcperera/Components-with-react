@@ -7,7 +7,9 @@ import { mainContainer } from "./MainContainer.module.css";
 function MainContainer({ children, className }) {
   return (
     <Wrapper>
-      <div className={`${mainContainer} ${className ? className : null}`}>
+      <div
+        id={"mainContainer"}
+        className={`${mainContainer} ${className ? className : null}`}>
         {children}
       </div>
     </Wrapper>

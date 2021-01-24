@@ -8,7 +8,7 @@ function ItemDetail({ id, title }) {
       <h2 className={itemTitle}>{`${id}. ${title}`}</h2>
       <div className={descContainer}>
         <img
-          src="https://lh3.googleusercontent.com/proxy/oeDAU-pHrYsuNNxmzykAG4hGxZGUku4WU3wQ-fFdlx6yJTCm_ys8eHrsn8sY4ewFKJOJQpTgOUOz34H1oNF3GoSbroSJfK2biMTlfxagfJiM4sMbzbLXU6JPcN7k1w"
+          src="https://d1tlw8zlp8jxtb.cloudfront.net/pub/media/highlights/default.jpg"
           alt="dummy"
         />
         <p>

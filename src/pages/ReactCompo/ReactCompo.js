@@ -35,6 +35,7 @@ const itemList = [
 
 function ReactCompo() {
   const [showItemDesc, setShowItemDesc] = useState(0);
+  const [moveContainer, setMoveContainer] = useState(true);
 
   const handleItemDesc = (itemId) => {
     setShowItemDesc(itemId);
@@ -64,10 +65,10 @@ function ReactCompo() {
 
   return (
     <MainContainer>
-      <CompContainer>
+      <CompContainer move={moveContainer}>
         <div className={scrollContainer}>{items}</div>
       </CompContainer>
-      <DescContainer>
+      <DescContainer move={moveContainer}>
         {showItemDesc === 0 ? <p>No item selected</p> : <>{itemDetails}</>}
       </DescContainer>
     </MainContainer>

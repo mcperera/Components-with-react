@@ -12,11 +12,18 @@ import {
 } from "./Item.module.css";
 
 function Item({ id, title, handleItemDesc }) {
+  const scrollToDesc = () => {
+    document.getElementById("mainContainer").scrollTo({
+      left: document.getElementById("mainContainer").scrollWidth,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={itemContainer}>
       <div className={previewBox}>
         <img
-          src="https://lh3.googleusercontent.com/proxy/oeDAU-pHrYsuNNxmzykAG4hGxZGUku4WU3wQ-fFdlx6yJTCm_ys8eHrsn8sY4ewFKJOJQpTgOUOz34H1oNF3GoSbroSJfK2biMTlfxagfJiM4sMbzbLXU6JPcN7k1w"
+          src="https://d1tlw8zlp8jxtb.cloudfront.net/pub/media/highlights/default.jpg"
           alt="dummy"
         />
       </div>
@@ -28,7 +35,12 @@ function Item({ id, title, handleItemDesc }) {
           <LaunchIcon />
         </div>
       </div>
-      <div className={moreArrow} onClick={() => handleItemDesc()}>
+      <div
+        className={moreArrow}
+        onClick={() => {
+          handleItemDesc();
+          scrollToDesc();
+        }}>
         <ArrowForwardIosIcon />
       </div>
     </div>
