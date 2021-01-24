@@ -5,6 +5,8 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import { Login, Home, ReactCompo, CssCompo } from "./pages";
 import { Dashboard } from "./components";
 
+import { ToastNotification } from "./_projects/react_components";
+
 import "./App.css";
 
 function App() {
@@ -25,6 +27,11 @@ function App() {
         <ProtectedRoute exact path={"/css"}>
           <Dashboard>
             <CssCompo />
+          </Dashboard>
+        </ProtectedRoute>
+        <ProtectedRoute exact path={"/react/toast-notification"}>
+          <Dashboard>
+            <ToastNotification />
           </Dashboard>
         </ProtectedRoute>
       </Switch>

@@ -1,0 +1,29 @@
+.toastMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--dark-shadow);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 75%;
+  width: 80%;
+
+  border: 1px solid black;
+}
+
+.banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LaunchIcon from "@material-ui/icons/Launch";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -31,8 +32,15 @@ function Item({ id, title, handleItemDesc }) {
         <h3>{`${id}. ${title}`}</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className={linksWrapper}>
-          <GitHubIcon />
-          <LaunchIcon />
+          <a
+            href="https://github.com/mcperera"
+            target="_blank"
+            rel="noopener noreferrer">
+            <GitHubIcon />
+          </a>
+          <Link to={"/react/toast-notification"}>
+            <LaunchIcon />
+          </Link>
         </div>
       </div>
       <div
