@@ -3,7 +3,7 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 import { descContainer, backIcon } from "./DescContainer.module.css";
 
-function DescContainer({ children }) {
+function DescContainer({ children, isSelected }) {
   const scrollToItems = () => {
     document.getElementById("mainContainer").scrollTo({
       left: 0,
@@ -13,9 +13,11 @@ function DescContainer({ children }) {
 
   return (
     <div className={`${descContainer}`}>
-      <div className={backIcon}>
-        <ArrowBackIosIcon onClick={() => scrollToItems()} />
-      </div>
+      {isSelected > 0 && (
+        <div className={backIcon}>
+          <ArrowBackIosIcon onClick={() => scrollToItems()} />
+        </div>
+      )}
       {children}
     </div>
   );
