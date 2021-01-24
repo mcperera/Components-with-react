@@ -25,13 +25,13 @@ main:before {
 }
 
 .homeStyle:before {
-  background-color: #09476b;
+  background-color: hsla(235, 55%, 21%, 0.85);
 }
 
 .reactStyle:before {
-  background-color: #0c5986;
+  background-color: teal;
 }
 
 .cssStyle:before {
-  background-color: #0e6aa0;
+  background-color: rgb(75 140 75);
 }

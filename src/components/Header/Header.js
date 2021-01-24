@@ -24,7 +24,10 @@ function Header() {
   const links = pageLinks.map((link, index) => {
     return (
       <li key={index}>
-        <NavLink exact to={link.to} activeStyle={{ color: "#a7a7a7" }}>
+        <NavLink
+          exact
+          to={link.to}
+          activeStyle={{ textDecoration: "underline" }}>
           {link.label}
         </NavLink>
       </li>

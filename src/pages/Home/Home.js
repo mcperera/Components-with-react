@@ -7,7 +7,7 @@ import { mainBackground } from "./Home.module.css";
 function Home() {
   return (
     <MainContainer className={mainBackground}>
-      <h1>Hello Home</h1>
+      <p>Hello World! 😍 Stay Tuned! 🤞</p>
     </MainContainer>
   );
 }
