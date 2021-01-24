@@ -8,8 +8,6 @@ import {
   ItemDetail,
 } from "../";
 
-import { scrollContainer } from "./PageLayout.mdoule.css";
-
 function PageLayout({ itemList }) {
   const [showItemDesc, setShowItemDesc] = useState(0);
 
@@ -41,9 +39,7 @@ function PageLayout({ itemList }) {
 
   return (
     <MainContainer>
-      <CompContainer>
-        <div className={scrollContainer}>{items}</div>
-      </CompContainer>
+      <CompContainer items={items} />
       <DescContainer isSelected={showItemDesc}>
         {showItemDesc === 0 ? <p>No item selected</p> : <>{itemDetails}</>}
       </DescContainer>

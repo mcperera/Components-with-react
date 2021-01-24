@@ -22,12 +22,12 @@
 }
 
 .descContainer::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
   background-color: #f5f5f5;
 }
 
 .descContainer::-webkit-scrollbar-thumb {
-  background-color: #767a80;
+  background-color: #767a80d8;
 }
 
 .descContainer > img {

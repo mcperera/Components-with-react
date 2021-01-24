@@ -1,9 +1,13 @@
 import React from "react";
 
-import { compContainer } from "./CompContainer.module.css";
+import { compContainer, scrollBox } from "./CompContainer.module.css";
 
-function CompContainer({ children }) {
-  return <div className={`${compContainer}`}>{children}</div>;
+function CompContainer({ items }) {
+  return (
+    <div className={`${compContainer}`}>
+      <div className={scrollBox}>{items}</div>
+    </div>
+  );
 }
 
 export default CompContainer;
