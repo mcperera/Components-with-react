@@ -20,10 +20,21 @@
   width: 80%;
 
   border: 1px solid black;
+  overflow: hidden;
 }
 
-.banner {
+.bannerStack {
   position: absolute;
   left: 0;
   top: 0;
+
+  overflow: hidden;
+}
+
+.banner {
+  height: 50px;
+  width: max-content;
+  padding: 10px;
+
+  background-color: cornflowerblue;
 }
