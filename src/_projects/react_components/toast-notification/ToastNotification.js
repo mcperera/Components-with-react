@@ -9,45 +9,53 @@ import {
   banner,
 } from "./ToastNotification.module.css";
 
-const Banner = () => {
+const Banner = ({ title }) => {
   return (
     <div className={banner}>
-      <p>Hello I'm the banner</p>
+      <p>{title}</p>
     </div>
   );
 };
 
 function ToastNotification() {
-  const [showBanner, setShowBanner] = useState(false);
   const [bannerArray, setBannerArray] = useState([]);
-  // const [bannerText, setBannerText] = useState("Hello I'm the banner");
 
   function autoRemoveBanner() {
     setTimeout(() => {
       setBannerArray((prev) => {
-        const newBanners = prev;
-        newBanners.shift();
+        const newBanners = prev.slice(1, prev.length);
+        //newBanners.shift();
         return newBanners;
       });
-      setShowBanner((prev) => !prev);
     }, 3000);
   }
 
   function addToBannerArray() {
     setBannerArray((prev) => {
       if (prev) {
-        return [...prev, <Banner key={Math.random() + 1} />];
+        return [
+          ...prev,
+          { key: Math.random() * 2, title: "Hello I'm the banner" },
+        ];
       } else {
-        return [<Banner key={Math.random() + 1} />];
+        return [{ key: Math.random() + 1, title: "Hello I'm the banner" }];
       }
     });
     autoRemoveBanner();
   }
 
+  console.log(bannerArray);
+
   return (
     <MainContainer className={toastMain}>
       <div className={container}>
-        {bannerArray && <div className={bannerStack}>{bannerArray}</div>}
+        {bannerArray && (
+          <div className={bannerStack}>
+            {bannerArray.map((item) => {
+              return <Banner key={item.key} title={item.title} />;
+            })}
+          </div>
+        )}
         <button onClick={() => addToBannerArray()}>Click Me :)</button>
       </div>
     </MainContainer>
