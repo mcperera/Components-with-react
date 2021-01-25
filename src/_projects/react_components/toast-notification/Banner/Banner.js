@@ -1,4 +1,3 @@
-import { colors } from "@material-ui/core";
 import React from "react";
 
 import { banner } from "./Banner.module.css";

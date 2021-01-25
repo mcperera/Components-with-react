@@ -21,14 +21,11 @@ function ToastNotification() {
   const handleInputs = (e) => {
     switch (e.target.type) {
       case "radio":
-        {
-          setBannerColor(e.target.value);
-        }
+        setBannerColor(e.target.value);
         break;
       case "text":
-        {
-          setTitle(e.target.value);
-        }
+        setTitle(e.target.value);
+
         break;
       default:
         break;
