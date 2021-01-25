@@ -33,7 +33,7 @@ function Item({ id, title, handleItemDesc }) {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className={linksWrapper}>
           <a
-            href="https://github.com/mcperera"
+            href="https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/toast-notification"
             target="_blank"
             rel="noopener noreferrer">
             <GitHubIcon />

@@ -25,7 +25,11 @@
 
 .bannerStack {
   position: absolute;
+
+  height: max-content;
+  width: max-content;
   padding: 10px;
+
   overflow: hidden;
 }
 
@@ -67,6 +71,10 @@
   padding: 20px;
 }
 
+.formContainer > h3 {
+  padding: 10px;
+}
+
 .formContainer > input[type="text"] {
   width: 35%;
   padding: 12px 20px;
@@ -82,12 +90,15 @@
 
 .radioRow {
   display: flex;
-  margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
   height: max-content;
   width: max-content;
+  margin: 20px;
   padding: 10px 15px;
 
   font-weight: 400;
@@ -111,5 +122,9 @@
 @media screen and (max-width: 480px) {
   .formContainer > input[type="text"] {
     width: 100%;
+  }
+
+  .formContainer {
+    padding: 0;
   }
 }

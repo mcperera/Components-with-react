@@ -1,8 +1,8 @@
 import React from "react";
 
-import { radioBox, radioInput } from "./ColorInput.module.css";
+import { radioBox, radioInput } from "./InputRadio.module.css";
 
-export default function ColorInput({
+export default function InputRadio({
   type,
   name,
   value,

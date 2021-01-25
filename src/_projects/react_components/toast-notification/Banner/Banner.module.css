@@ -13,13 +13,87 @@
   top: 50%;
   right: 50%;
   transform: translate(0%, 0%);
+}
 
+.bannerMoveToRight {
   animation: moveToRight 4s ease;
 }
 
 @keyframes moveToRight {
   0% {
     transform: translate(-110%, 0%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bannerMoveToLeft {
+  animation: moveToLeft 4s ease;
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translate(110%, 0%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bannerMoveToBottom {
+  animation: moveToBottom 4s ease;
+}
+
+@keyframes moveToBottom {
+  0% {
+    transform: translate(0%, -150%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bannerMoveToTop {
+  animation: moveToTop 4s ease;
+}
+
+@keyframes moveToTop {
+  0% {
+    transform: translate(0%, 150%);
     opacity: 0;
   }
   25% {

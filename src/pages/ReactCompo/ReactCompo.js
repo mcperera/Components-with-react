@@ -5,7 +5,7 @@ import { PageLayout } from "../../components";
 const itemList = [
   {
     id: 1,
-    title: "React Component Name",
+    title: "Toast Notifications",
   },
   {
     id: 2,
