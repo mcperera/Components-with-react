@@ -6,6 +6,7 @@ import InputRadio from "./InputRadio/InputRadio";
 
 import {
   toastMain,
+  pageTitle,
   container,
   bannerStack,
   formContainer,
@@ -44,16 +45,12 @@ const positionRadioBtns = [
     label: "Top Left",
   },
   {
-    position: "TopRight",
-    label: "Top Right",
-  },
-  {
     position: "TopCenter",
     label: "Top Center",
   },
   {
-    position: "BottomCenter",
-    label: "Bottom Center",
+    position: "TopRight",
+    label: "Top Right",
   },
   {
     position: "BottomLeft",
@@ -62,6 +59,10 @@ const positionRadioBtns = [
   {
     position: "BottomRight",
     label: "Bottom Right",
+  },
+  {
+    position: "BottomCenter",
+    label: "Bottom Center",
   },
 ];
 
@@ -109,7 +110,8 @@ function ToastNotification() {
   function autoRemoveBanner() {
     setTimeout(() => {
       setBannerArray((prev) => {
-        const newBanners = prev.slice(1, prev.length);
+        //const newBanners = prev.slice(1, prev.length);
+        const newBanners = prev.slice(0, prev.length - 1); // ---> swap 1
         //newBanners.shift(); cannot use since this isn't returning a new array
         return newBanners;
       });
@@ -121,7 +123,8 @@ function ToastNotification() {
     const { title, colors, position } = bannerDetails;
     setBannerArray((prev) => {
       if (prev) {
-        return [...prev, { key: Math.random() * 2, title, colors, position }];
+        //return [...prev, { key: Math.random() * 2, title, colors, position }];
+        return [{ key: Math.random() * 2, title, colors, position }, ...prev]; // ---> swap 1
       } else {
         return [{ key: Math.random() * 2, title, colors, position }];
       }
@@ -131,8 +134,9 @@ function ToastNotification() {
 
   return (
     <MainContainer className={toastMain}>
+      <h2 className={pageTitle}>- Toast Notifications -</h2>
       <div className={container}>
-        {bannerArray && (
+        {bannerArray.length > 0 && (
           <div className={`${bannerStack} ${position}`}>
             {bannerArray.map((item) => {
               const { key, title, colors, position } = item;
@@ -148,47 +152,53 @@ function ToastNotification() {
           </div>
         )}
         <form onSubmit={(e) => addToBannerArray(e)} className={formContainer}>
-          <h3>Banner Title</h3>
-          <input
-            type="text"
-            name="title"
-            value={bannerDetails.title}
-            onChange={handleInputs}
-          />
-          <h3>Color</h3>
-          <div className={radioRow}>
-            {colorRadioBtns.map((item, index) => {
-              const { value, label } = item;
-              return (
-                <InputRadio
-                  key={index}
-                  type="radio"
-                  name="colors"
-                  value={value}
-                  label={label}
-                  onChange={handleInputs}
-                  checked={bannerDetails.colors === value}
-                />
-              );
-            })}
-          </div>
-          <h3>Position</h3>
-          <div className={radioRow}>
-            {positionRadioBtns.map((item, index) => {
-              const { position, label } = item;
-              return (
-                <InputRadio
-                  key={index}
-                  type="radio"
-                  name="position"
-                  value={position}
-                  label={label}
-                  onChange={handleInputs}
-                  checked={bannerDetails.position === position}
-                />
-              );
-            })}
-          </div>
+          <section>
+            <h3>Enter Your Banner Title</h3>
+            <input
+              type="text"
+              name="title"
+              value={bannerDetails.title}
+              onChange={handleInputs}
+            />
+          </section>
+          <section>
+            <h3>Select Banner Color</h3>
+            <div className={radioRow}>
+              {colorRadioBtns.map((item, index) => {
+                const { value, label } = item;
+                return (
+                  <InputRadio
+                    key={index}
+                    type="radio"
+                    name="colors"
+                    value={value}
+                    label={label}
+                    onChange={handleInputs}
+                    checked={bannerDetails.colors === value}
+                  />
+                );
+              })}
+            </div>
+          </section>
+          <section>
+            <h3>Banner Position</h3>
+            <div className={radioRow}>
+              {positionRadioBtns.map((item, index) => {
+                const { position, label } = item;
+                return (
+                  <InputRadio
+                    key={index}
+                    type="radio"
+                    name="position"
+                    value={position}
+                    label={label}
+                    onChange={handleInputs}
+                    checked={bannerDetails.position === position}
+                  />
+                );
+              })}
+            </div>
+          </section>
           <button className={btn} type="submit">
             Toast Me! 😊
           </button>

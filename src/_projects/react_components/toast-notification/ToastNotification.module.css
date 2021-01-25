@@ -1,5 +1,7 @@
 .toastMain {
+  position: relative; /* Banner show in this position */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -8,10 +10,19 @@
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: var(--dark-shadow);
+
+  overflow: hidden; /* Banner overflow stop */
+}
+
+.pageTitle {
+  padding: 10px;
+
+  font-weight: 500;
+  border-bottom: 1px solid black;
 }
 
 .container {
-  position: relative;
+  /* position: relative; */ /* Banner can show in this position */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +30,6 @@
   height: 90%;
   width: 90%;
 
-  /* border: 1px solid black; */
   overflow: hidden;
 }
 
@@ -68,15 +78,24 @@
   align-items: center;
 
   width: 100%;
-  padding: 20px;
 }
 
-.formContainer > h3 {
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+section > h3 {
   padding: 10px;
+  font-weight: 200;
 }
 
-.formContainer > input[type="text"] {
-  width: 35%;
+input[type="text"] {
+  width: 100%;
   padding: 12px 20px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -84,7 +103,7 @@
   box-sizing: border-box;
 }
 
-.formContainer > input[type="text"]:focus {
+input[type="text"]:focus {
   outline: none;
 }
 
