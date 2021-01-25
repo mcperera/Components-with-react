@@ -1,27 +1,31 @@
 import React from "react";
 
 import { PageLayout } from "../../components";
+import toast from "../../assets/images/_projects/react/toast/toast.png";
 
 const itemList = [
   {
     id: 1,
     title: "Toast Notifications",
-  },
-  {
-    id: 2,
-    title: "React Component Name",
-  },
-  {
-    id: 3,
-    title: "React Component Name",
-  },
-  {
-    id: 4,
-    title: "React Component Name",
-  },
-  {
-    id: 5,
-    title: "React Component Name",
+    shortDesc: "Simple, customizable notification popup with positionings",
+    gitUrl:
+      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/toast-notification",
+    link: "/react/toast-notification",
+    description: (
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Necessitatibus, totam numquam. Itaque atque aspernatur ipsa laboriosam
+        accusamus odit autem, error vel nam dolor cum fugit dicta libero
+        dignissimos facilis eum? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Necessitatibus, totam numquam. <br /> Itaque atque
+        aspernatur ipsa laboriosam accusamus odit autem, error vel nam dolor cum
+        fugit dicta libero dignissimos facilis eum? Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Necessitatibus, totam numquam. Itaque
+        atque aspernatur ipsa laboriosam accusamus odit autem, error vel nam
+        dolor cum fugit dicta libero dignissimos facilis eum?
+      </p>
+    ),
+    img: toast,
   },
 ];
 

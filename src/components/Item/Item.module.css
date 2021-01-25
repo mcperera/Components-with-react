@@ -24,6 +24,10 @@
 
   height: 80%;
   width: 100%;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
 }
 
 .previewBox > img {
