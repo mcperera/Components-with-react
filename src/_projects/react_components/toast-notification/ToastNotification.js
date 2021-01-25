@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 
 import { MainContainer } from "../../../components";
+import Banner from "./Banner/Banner";
 
 import {
   toastMain,
   container,
   bannerStack,
-  banner,
+  btn,
 } from "./ToastNotification.module.css";
-
-const Banner = ({ title }) => {
-  return (
-    <div className={banner}>
-      <p>{title}</p>
-    </div>
-  );
-};
 
 function ToastNotification() {
   const [bannerArray, setBannerArray] = useState([]);
@@ -27,7 +20,7 @@ function ToastNotification() {
         //newBanners.shift();
         return newBanners;
       });
-    }, 3000);
+    }, 4000);
   }
 
   function addToBannerArray() {
@@ -56,7 +49,9 @@ function ToastNotification() {
             })}
           </div>
         )}
-        <button onClick={() => addToBannerArray()}>Click Me :)</button>
+        <button className={btn} onClick={() => addToBannerArray()}>
+          Toast Me 😊
+        </button>
       </div>
     </MainContainer>
   );

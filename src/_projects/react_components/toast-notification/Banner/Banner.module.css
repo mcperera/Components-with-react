@@ -1,0 +1,37 @@
+.banner {
+  height: max-content;
+  width: max-content;
+  margin: 5px;
+  padding: 15px;
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+
+  background-color: teal;
+
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, 0%);
+
+  animation: moveToRight 4s ease;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translate(-110%, 0%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -16,10 +16,10 @@
   justify-content: center;
   align-items: center;
 
-  height: 75%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
 
-  border: 1px solid black;
+  /* border: 1px solid black; */
   overflow: hidden;
 }
 
@@ -27,14 +27,29 @@
   position: absolute;
   left: 0;
   top: 0;
-
+  padding: 10px;
   overflow: hidden;
 }
 
-.banner {
-  height: 50px;
+.btn {
+  height: max-content;
   width: max-content;
-  padding: 10px;
+  padding: 10px 15px;
 
-  background-color: cornflowerblue;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  box-shadow: var(--dark-shadow);
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: hsl(185deg 62% 45%);
+  color: white;
 }
