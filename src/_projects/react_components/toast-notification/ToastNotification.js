@@ -13,23 +13,37 @@ import {
   btn,
 } from "./ToastNotification.module.css";
 
+const colorRadioBtns = [
+  {
+    value: "black",
+    label: "Black",
+  },
+  {
+    value: "teal",
+    label: "Teal",
+  },
+  {
+    value: "lime",
+    label: "Lime",
+  },
+  {
+    value: "red",
+    label: "Red",
+  },
+];
+
 function ToastNotification() {
   const [bannerArray, setBannerArray] = useState([]);
-  const [title, setTitle] = useState("Hello, I need a title 👻");
-  const [bannerColor, setBannerColor] = useState("blue");
+  const [bannerDetails, setBannerDetails] = useState({
+    title: "Hello, I need a title 👻",
+    colors: "black",
+  });
 
   const handleInputs = (e) => {
-    switch (e.target.type) {
-      case "radio":
-        setBannerColor(e.target.value);
-        break;
-      case "text":
-        setTitle(e.target.value);
-
-        break;
-      default:
-        break;
-    }
+    const { name, value } = e.target;
+    setBannerDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
   };
 
   function autoRemoveBanner() {
@@ -44,15 +58,16 @@ function ToastNotification() {
 
   function addToBannerArray(event) {
     event.preventDefault();
+    const { title, colors } = bannerDetails;
 
     setBannerArray((prev) => {
       if (prev) {
-        return [...prev, { key: Math.random() * 2, title, bannerColor }];
+        return [...prev, { key: Math.random() * 2, title, colors }];
       } else {
         return [{ key: Math.random() + 1, title }];
       }
     });
-    autoRemoveBanner();
+    // autoRemoveBanner();
   }
 
   return (
@@ -65,7 +80,7 @@ function ToastNotification() {
                 <Banner
                   key={item.key}
                   title={item.title}
-                  bannerColor={item.bannerColor}
+                  colors={item.colors}
                 />
               );
             })}
@@ -75,45 +90,27 @@ function ToastNotification() {
           <input
             type="text"
             name="title"
-            value={title}
+            value={bannerDetails.title}
             onChange={handleInputs}
           />
           <div className={radioRow}>
-            <Input
-              type="radio"
-              name="colors"
-              value="blue"
-              label="Blue"
-              onChange={handleInputs}
-              checked={bannerColor === "blue"}
-            />
-            <Input
-              type="radio"
-              name="colors"
-              value="teal"
-              label="Teal"
-              onChange={handleInputs}
-              checked={bannerColor === "teal"}
-            />
-            <Input
-              type="radio"
-              name="colors"
-              value="green"
-              label="Green"
-              onChange={handleInputs}
-              checked={bannerColor === "green"}
-            />
-            <Input
-              type="radio"
-              name="colors"
-              value="red"
-              label="Red"
-              onChange={handleInputs}
-              checked={bannerColor === "red"}
-            />
+            {colorRadioBtns.map((item, index) => {
+              const { value, label } = item;
+              return (
+                <Input
+                  key={index}
+                  type="radio"
+                  name="colors"
+                  value={value}
+                  label={label}
+                  onChange={handleInputs}
+                  checked={bannerDetails.colors === value}
+                />
+              );
+            })}
           </div>
           <button className={btn} type="submit">
-            Toast Me 😊
+            Toast Me! 😊
           </button>
         </form>
       </div>
