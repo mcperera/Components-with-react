@@ -11,6 +11,12 @@ import {
   formContainer,
   radioRow,
   btn,
+  stackTopLeft,
+  stackTopRight,
+  stackBottomLeft,
+  stackBottomRight,
+  stackTopCenter,
+  stackBottomCenter,
 } from "./ToastNotification.module.css";
 
 const colorRadioBtns = [
@@ -32,12 +38,60 @@ const colorRadioBtns = [
   },
 ];
 
+const positionRadioBtns = [
+  {
+    position: "TopLeft",
+  },
+  {
+    position: "TopRight",
+  },
+  {
+    position: "TopCenter",
+  },
+  {
+    position: "BottomCenter",
+  },
+  {
+    position: "BottomLeft",
+  },
+  {
+    position: "BottomRight",
+  },
+];
+
 function ToastNotification() {
   const [bannerArray, setBannerArray] = useState([]);
   const [bannerDetails, setBannerDetails] = useState({
     title: "Hello, I need a title 👻",
     colors: "black",
+    position: "TopLeft",
   });
+
+  let position = null;
+
+  switch (bannerDetails.position) {
+    case "TopLeft":
+      position = stackTopLeft;
+      break;
+    case "TopRight":
+      position = stackTopRight;
+      break;
+    case "TopCenter":
+      position = stackTopCenter;
+      break;
+    case "BottomCenter":
+      position = stackBottomCenter;
+      break;
+    case "BottomLeft":
+      position = stackBottomLeft;
+      break;
+    case "BottomRight":
+      position = stackBottomRight;
+      break;
+    default:
+      position = stackTopLeft;
+      break;
+  }
 
   const handleInputs = (e) => {
     const { name, value } = e.target;
@@ -50,7 +104,7 @@ function ToastNotification() {
     setTimeout(() => {
       setBannerArray((prev) => {
         const newBanners = prev.slice(1, prev.length);
-        //newBanners.shift();
+        //newBanners.shift(); cannot use since this isn't returning a new array
         return newBanners;
       });
     }, 4000);
@@ -67,14 +121,14 @@ function ToastNotification() {
         return [{ key: Math.random() + 1, title }];
       }
     });
-    // autoRemoveBanner();
+    autoRemoveBanner();
   }
 
   return (
     <MainContainer className={toastMain}>
       <div className={container}>
         {bannerArray && (
-          <div className={bannerStack}>
+          <div className={`${bannerStack} ${position}`}>
             {bannerArray.map((item) => {
               return (
                 <Banner
@@ -105,6 +159,22 @@ function ToastNotification() {
                   label={label}
                   onChange={handleInputs}
                   checked={bannerDetails.colors === value}
+                />
+              );
+            })}
+          </div>
+          <div className={radioRow}>
+            {positionRadioBtns.map((item, index) => {
+              const { position } = item;
+              return (
+                <Input
+                  key={index}
+                  type="radio"
+                  name="position"
+                  value={position}
+                  label={position}
+                  onChange={handleInputs}
+                  checked={bannerDetails.position === position}
                 />
               );
             })}

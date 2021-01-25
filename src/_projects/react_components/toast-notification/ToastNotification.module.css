@@ -25,10 +25,36 @@
 
 .bannerStack {
   position: absolute;
-  left: 0;
-  top: 0;
   padding: 10px;
   overflow: hidden;
+}
+
+.stackTopLeft {
+  left: 0;
+  top: 0;
+}
+
+.stackTopRight {
+  right: 0;
+  top: 0;
+}
+
+.stackBottomLeft {
+  left: 0;
+  bottom: 0;
+}
+
+.stackBottomRight {
+  right: 0;
+  bottom: 0;
+}
+
+.stackTopCenter {
+  top: 0;
+}
+
+.stackBottomCenter {
+  bottom: 0;
 }
 
 .formContainer {
