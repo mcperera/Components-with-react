@@ -12,6 +12,7 @@ import {
 
 function ToastNotification() {
   const [bannerArray, setBannerArray] = useState([]);
+  const [title, setTitle] = useState("Hello I'm the banner");
 
   function autoRemoveBanner() {
     setTimeout(() => {
@@ -23,15 +24,14 @@ function ToastNotification() {
     }, 4000);
   }
 
-  function addToBannerArray() {
+  function addToBannerArray(event) {
+    event.preventDefault();
+    console.log(title);
     setBannerArray((prev) => {
       if (prev) {
-        return [
-          ...prev,
-          { key: Math.random() * 2, title: "Hello I'm the banner" },
-        ];
+        return [...prev, { key: Math.random() * 2, title }];
       } else {
-        return [{ key: Math.random() + 1, title: "Hello I'm the banner" }];
+        return [{ key: Math.random() + 1, title }];
       }
     });
     autoRemoveBanner();
@@ -49,9 +49,17 @@ function ToastNotification() {
             })}
           </div>
         )}
-        <button className={btn} onClick={() => addToBannerArray()}>
-          Toast Me 😊
-        </button>
+        <form onSubmit={(e) => addToBannerArray(e)}>
+          <input
+            type="text"
+            name="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <button className={btn} type="submit">
+            Toast Me 😊
+          </button>
+        </form>
       </div>
     </MainContainer>
   );

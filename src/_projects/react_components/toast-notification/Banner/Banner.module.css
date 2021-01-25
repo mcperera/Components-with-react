@@ -3,10 +3,12 @@
   width: max-content;
   margin: 5px;
   padding: 15px;
-  color: white;
-  border-radius: var(--radius);
-  box-shadow: var(--dark-shadow);
 
+  color: white;
+  background-color: teal;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  box-shadow: var(--dark-shadow);
   background-color: teal;
 
   top: 50%;
