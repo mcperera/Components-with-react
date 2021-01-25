@@ -9,7 +9,6 @@
   border-radius: var(--radius);
   border: 1px solid transparent;
   box-shadow: var(--dark-shadow);
-  background-color: teal;
 
   top: 50%;
   right: 50%;

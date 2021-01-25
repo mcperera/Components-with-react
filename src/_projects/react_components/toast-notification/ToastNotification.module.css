@@ -31,6 +31,34 @@
   overflow: hidden;
 }
 
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px;
+}
+
+.formContainer > input[type="text"] {
+  width: 35%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.formContainer > input[type="text"]:focus {
+  outline: none;
+}
+
+.radioRow {
+  display: flex;
+  margin: 10px 0;
+}
+
 .btn {
   height: max-content;
   width: max-content;
@@ -52,4 +80,10 @@
 .btn:hover {
   background-color: hsl(185deg 62% 45%);
   color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .formContainer > input[type="text"] {
+    width: 100%;
+  }
 }
