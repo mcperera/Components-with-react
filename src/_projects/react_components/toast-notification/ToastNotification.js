@@ -5,7 +5,7 @@ import { MainContainer } from "../../../components";
 import ToastWrapper from "./ToastWrapper/ToastWrapper";
 import ToastForm from "./ToastForm/ToastForm";
 
-import { toastMain, pageTitle } from "./ToastNotification.module.css";
+import { toastMain } from "./ToastNotification.module.css";
 
 function ToastNotification() {
   return (
