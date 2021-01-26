@@ -139,6 +139,11 @@ input[type="text"]:focus {
 }
 
 @media screen and (max-width: 480px) {
+  .container {
+    display: block;
+    overflow: auto;
+  }
+
   .formContainer > input[type="text"] {
     width: 100%;
   }
