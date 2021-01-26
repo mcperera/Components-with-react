@@ -65,7 +65,7 @@
   height: 35px;
   width: 75px;
 
-  bottom: 5px;
+  bottom: 0px;
   left: 5px;
 
   /* border: 1px solid black; */
@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 480px) {
   .itemContainer {
-    grid-template-columns: 100px auto 20px;
+    grid-template-columns: 130px auto 20px;
     grid-template-rows: 130px;
     gap: 5px;
   }

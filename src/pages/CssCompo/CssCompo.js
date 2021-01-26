@@ -5,11 +5,7 @@ import { PageLayout } from "../../components";
 const itemList = [
   {
     id: 1,
-    title: "CSS Component Name",
-  },
-  {
-    id: 2,
-    title: "CSS Component Name",
+    title: "Test",
   },
 ];
 

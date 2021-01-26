@@ -1,0 +1,56 @@
+.toastWrapper {
+  /* position: relative; */ /* Banner can show in this position */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90%;
+  width: 90%;
+
+  overflow: hidden;
+}
+
+.bannerStack {
+  position: absolute;
+
+  height: max-content;
+  width: max-content;
+  padding: 10px;
+
+  overflow: hidden;
+}
+
+.stackTopLeft {
+  left: 0;
+  top: 0;
+}
+
+.stackTopRight {
+  right: 0;
+  top: 0;
+}
+
+.stackBottomLeft {
+  left: 0;
+  bottom: 0;
+}
+
+.stackBottomRight {
+  right: 0;
+  bottom: 0;
+}
+
+.stackTopCenter {
+  top: 0;
+}
+
+.stackBottomCenter {
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .toastWrapper {
+    display: block;
+    overflow: auto;
+  }
+}

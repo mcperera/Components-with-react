@@ -1,0 +1,66 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+section > h3 {
+  padding: 10px;
+  font-weight: 200;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.radioRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: max-content;
+  width: max-content;
+  margin: 20px;
+  padding: 10px 15px;
+
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  box-shadow: var(--dark-shadow);
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
