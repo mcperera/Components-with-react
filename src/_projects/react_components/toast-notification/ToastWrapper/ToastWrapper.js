@@ -11,6 +11,7 @@ import {
   stackBottomRight,
   stackTopCenter,
   stackBottomCenter,
+  childrenContainer,
 } from "./ToastWrapper.module.css";
 
 const ToastContext = createContext();
@@ -100,7 +101,7 @@ function ToastWrapper({ children }) {
             })}
           </div>
         )}
-        {children}
+        <div className={childrenContainer}>{children}</div>
       </div>
     </ToastContext.Provider>
   );

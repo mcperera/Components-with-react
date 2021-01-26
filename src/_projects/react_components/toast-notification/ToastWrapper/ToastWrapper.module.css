@@ -48,9 +48,7 @@
   bottom: 0;
 }
 
-@media screen and (max-width: 480px) {
-  .toastWrapper {
-    display: block;
-    overflow: auto;
-  }
+.childrenContainer {
+  height: 100%;
+  overflow: auto;
 }
