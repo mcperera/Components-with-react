@@ -58,3 +58,10 @@
   /* -webkit-scrollbar-thumb */
   --background-color-thumb: #767a80d8;
 }
+
+.pageTitle {
+  padding: 10px;
+
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}

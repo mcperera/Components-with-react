@@ -10,7 +10,7 @@ import { toastMain, pageTitle } from "./ToastNotification.module.css";
 function ToastNotification() {
   return (
     <MainContainer className={toastMain}>
-      <h2 className={pageTitle}>- Toast Notifications -</h2>
+      <h2 className="pageTitle">- Toast Notifications -</h2>
       <ToastWrapper>
         <ToastForm />
       </ToastWrapper>

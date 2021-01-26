@@ -14,13 +14,6 @@
   overflow: hidden; /* Banner overflow stop */
 }
 
-.pageTitle {
-  padding: 10px;
-
-  font-weight: 500;
-  border-bottom: 1px solid black;
-}
-
 .container {
   /* position: relative; */ /* Banner can show in this position */
   display: flex;

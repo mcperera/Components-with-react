@@ -4,9 +4,39 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 10px;
+  padding: 10px 10%;
+
+  text-align: center;
+
   background-color: white;
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: var(--dark-shadow);
+}
+
+.btn {
+  height: max-content;
+  width: max-content;
+  margin: 20px;
+  padding: 10px 15px;
+
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  box-shadow: var(--dark-shadow);
+
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background-color: hsla(235, 55%, 21%, 0.85);
+  color: white;
 }
