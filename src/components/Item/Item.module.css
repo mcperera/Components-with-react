@@ -65,7 +65,7 @@
   height: 35px;
   width: 75px;
 
-  bottom: 0px;
+  bottom: 5px;
   left: 5px;
 
   /* border: 1px solid black; */
@@ -119,5 +119,10 @@
 
   .itemDetails > p {
     font-size: 0.9rem;
+  }
+  .linksWrapper {
+    bottom: 0px;
+
+    /* border: 1px solid black; */
   }
 }
