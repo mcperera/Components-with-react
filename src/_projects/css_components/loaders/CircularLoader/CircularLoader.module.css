@@ -1,17 +1,3 @@
-.circularMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 10px;
-  background-color: white;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  box-shadow: var(--dark-shadow);
-
-  overflow: hidden;
-}
-
 .circularWrapper {
   display: flex;
   flex-direction: column;
@@ -29,27 +15,21 @@
   justify-content: center;
   align-items: center;
 
-  height: 150px;
-  width: 150px;
+  height: 8vw;
+  width: 8vw;
 
   border-radius: 50%;
-
   border: 5px solid rgba(0, 0, 0, 0.2);
   border-bottom: 5px solid black;
-
-  animation: loading 2s infinite linear;
 }
 
 .loader2 {
-  height: 100%;
-  width: 100%;
+  height: 98%;
+  width: 98%;
 
   border-radius: 50%;
-
   border: 5px solid rgba(0, 0, 0, 0.2);
   border-bottom: 5px solid black;
-
-  animation: loading 5s infinite linear;
 }
 
 @keyframes loading {
@@ -64,5 +44,20 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.loader1:hover {
+  animation: loading 2s infinite linear;
+}
+
+.loader1:hover .loader2 {
+  animation: loading 5s infinite linear;
+}
+
+@media screen and (max-width: 480px) {
+  .loader1 {
+    height: 30vw;
+    width: 30vw;
   }
 }

@@ -1,0 +1,34 @@
+.loaderMain {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: max-content;
+  justify-content: center;
+
+  justify-items: center;
+  align-items: center;
+
+  padding: 10px;
+
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--dark-shadow);
+
+  overflow: hidden;
+}
+
+.expandTitle {
+  grid-column: 1/4;
+}
+
+@media screen and (max-width: 480px) {
+  .loaderMain {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+
+    overflow: auto;
+  }
+
+  .expandTitle {
+    grid-column: 1/2;
+  }
+}
