@@ -6,6 +6,7 @@ import { Login, Home, ReactCompo, CssCompo } from "./pages";
 import { Dashboard } from "./components";
 
 import { ToastNotification } from "./_projects/react_components";
+import { CircularLoading } from "./_projects/css_components";
 
 import "./App.css";
 
@@ -32,6 +33,11 @@ function App() {
         <ProtectedRoute exact path={"/react/toast-notification"}>
           <Dashboard>
             <ToastNotification />
+          </Dashboard>
+        </ProtectedRoute>
+        <ProtectedRoute exact path={"/css/circular-loading"}>
+          <Dashboard>
+            <CircularLoading />
           </Dashboard>
         </ProtectedRoute>
       </Switch>

@@ -14,7 +14,7 @@ function Home() {
         I'm still working on this and happy to listen to your thoughts as well.
       </p>
       <a className={btn} href="mailto:madushanperera3817@gmail.com">
-        Comments 😇
+        Comments
       </a>
     </MainContainer>
   );
