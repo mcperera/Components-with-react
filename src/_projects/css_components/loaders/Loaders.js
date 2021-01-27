@@ -9,9 +9,9 @@ function Loaders() {
   return (
     <MainContainer className={loaderMain}>
       <h2 className={`pageTitle ${expandTitle}`}>- Loaders -</h2>
-      <CircularLoader />
-      <BarLoader />
       <TextLoader />
+      <BarLoader />
+      <CircularLoader />
     </MainContainer>
   );
 }

@@ -6,10 +6,10 @@ import loading from "../../assets/images/_projects/css/loading/loading.png";
 const itemList = [
   {
     id: 1,
-    title: "Circular Loading",
-    shortDesc: "Animated Loading circle.",
+    title: "Loaders",
+    shortDesc: "Animated Loading indicators.",
     gitUrl:
-      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/toast-notification",
+      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/css_components/loaders",
     link: "/css/circular-loading",
     description: (
       <p>

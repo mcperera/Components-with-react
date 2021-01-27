@@ -10,6 +10,11 @@
   overflow: hidden;
 }
 
+.shadow {
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
 .loader1 {
   display: flex;
   justify-content: center;
