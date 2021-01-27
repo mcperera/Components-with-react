@@ -50,14 +50,14 @@ function ToastWrapper({ children }) {
       break;
   }
 
-  const handleInputs = (e) => {
-    const { name, value } = e.target;
-    setBannerDetails((prev) => {
-      return { ...prev, [name]: value };
-    });
-  };
+  // const handleInputs = (e) => {
+  //   const { name, value } = e.target;
+  //   setBannerDetails((prev) => {
+  //     return { ...prev, [name]: value };
+  //   });
+  // };
 
-  function autoRemoveBanner() {
+  function autoRemoveBanner(time) {
     setTimeout(() => {
       setBannerArray((prev) => {
         //const newBanners = prev.slice(1, prev.length);
@@ -65,7 +65,7 @@ function ToastWrapper({ children }) {
         //newBanners.shift(); cannot use since this isn't returning a new array
         return newBanners;
       });
-    }, 4000);
+    }, time);
   }
 
   function addToBannerArray(event) {
@@ -79,12 +79,16 @@ function ToastWrapper({ children }) {
         return [{ key: Math.random() * 2, title, colors, position }];
       }
     });
-    autoRemoveBanner();
+    autoRemoveBanner(4000);
   }
 
   return (
     <ToastContext.Provider
-      value={{ handleInputs, addToBannerArray, bannerDetails }}>
+      value={{
+        addToBannerArray,
+        setBannerDetails,
+        bannerDetails,
+      }}>
       <div className={toastWrapper}>
         {bannerArray.length > 0 && (
           <div className={`${bannerStack} ${position}`}>

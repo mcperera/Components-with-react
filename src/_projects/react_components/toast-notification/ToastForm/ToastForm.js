@@ -52,9 +52,16 @@ const positionRadioBtns = [
 ];
 
 function ToastForm() {
-  const { handleInputs, addToBannerArray, bannerDetails } = useContext(
+  const { addToBannerArray, setBannerDetails, bannerDetails } = useContext(
     ToastContext
   );
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    setBannerDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
 
   return (
     <form onSubmit={(e) => addToBannerArray(e)} className={formContainer}>
