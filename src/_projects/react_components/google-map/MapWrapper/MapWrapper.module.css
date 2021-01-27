@@ -1,7 +1,7 @@
 .mapWrapper {
   display: grid;
   grid-template-columns: 4fr 3fr;
-  gap: 15px;
+  gap: 40px;
 
   height: 100%;
   width: 100%;
@@ -17,10 +17,14 @@
   .mapWrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: max-content;
     gap: 15px;
 
     height: 100%;
     width: 100%;
+  }
+
+  .mapContainer {
+    grid-row: 2/3;
   }
 }

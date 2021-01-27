@@ -1,11 +1,26 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, createContext, useState } from "react";
 import { mapWrapper, mapContainer } from "./MapWrapper.module.css";
-require("dotenv").config();
+//require("dotenv").config();
 
-function MapWrapper({ children }) {
+const MapContext = createContext();
+
+function MapWrapper({ children, apiKey, defaultLocation, defaultUI = false }) {
+  const [searchValue, setSearchValue] = useState("");
   const googleMapRef = useRef();
+
   let googleMap;
-  let placeName = "Colombo, Sri Lanka";
+  let placeName = defaultLocation && defaultLocation;
+
+  const searchLocation = (event) => {
+    event.preventDefault();
+    if (searchValue) {
+      placeName = searchValue;
+      getLatLng();
+      setSearchValue("");
+    } else {
+      alert("Yo.. Type something 🙄");
+    }
+  };
 
   const createGoogleMap = (coordinates) => {
     googleMap = new window.google.maps.Map(googleMapRef.current, {
@@ -14,6 +29,7 @@ function MapWrapper({ children }) {
         lat: coordinates.lat(),
         lng: coordinates.lng(),
       },
+      disableDefaultUI: defaultUI,
     });
   };
 
@@ -44,20 +60,24 @@ function MapWrapper({ children }) {
 
   useEffect(() => {
     const googleMapScript = document.createElement("script");
-    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_API_KEY}&libraries=places`;
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
     googleMapScript.async = true;
     window.document.body.appendChild(googleMapScript);
     googleMapScript.addEventListener("load", () => {
       getLatLng();
     });
-  }, []);
+  }, [apiKey]);
 
   return (
-    <div className={mapWrapper}>
-      <div id="google-map" ref={googleMapRef} className={mapContainer} />
-      {children}
-    </div>
+    <MapContext.Provider
+      value={{ searchValue, setSearchValue, searchLocation }}>
+      <div className={mapWrapper}>
+        <div id="google-map" ref={googleMapRef} className={mapContainer} />
+        {children}
+      </div>
+    </MapContext.Provider>
   );
 }
 
 export default MapWrapper;
+export { MapContext };

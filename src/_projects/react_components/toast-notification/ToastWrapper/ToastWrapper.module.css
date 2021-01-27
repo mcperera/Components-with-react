@@ -18,6 +18,8 @@
   padding: 10px;
 
   overflow: hidden;
+
+  z-index: 25; /* Take up*/
 }
 
 .stackTopLeft {
@@ -50,5 +52,6 @@
 
 .childrenContainer {
   height: 100%;
+  width: 100%;
   overflow: auto;
 }

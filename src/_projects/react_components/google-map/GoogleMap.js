@@ -1,21 +1,22 @@
 import React from "react";
-
 import { MainContainer } from "../../../components";
 import { MapWrapper } from "../";
+import { mapMain } from "./GoogleMap.module.css";
+import SearchForm from "./SearchForm/SearchForm";
+import { ToastWrapper } from "../";
 
-import { mapMain, searchContainer, btn } from "./GoogleMap.module.css";
+require("dotenv").config();
 
 function GoogleMap() {
   return (
     <MainContainer className={mapMain}>
-      <MapWrapper>
-        <div className={searchContainer}>
-          <form>
-            <input type="text" />
-            <button className={btn}>Search</button>
-          </form>
-        </div>
-      </MapWrapper>
+      <ToastWrapper>
+        <MapWrapper
+          apiKey={process.env.REACT_APP_API_KEY}
+          defaultLocation={"Colombo, Sri Lanka"}>
+          <SearchForm />
+        </MapWrapper>
+      </ToastWrapper>
     </MainContainer>
   );
 }

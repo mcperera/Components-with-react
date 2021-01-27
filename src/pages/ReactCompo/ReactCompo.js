@@ -2,6 +2,7 @@ import React from "react";
 
 import { PageLayout } from "../../components";
 import toast from "../../assets/images/_projects/react/toast/toast.png";
+import map from "../../assets/images/_projects/react/map/map.png";
 
 const itemList = [
   {
@@ -32,7 +33,7 @@ const itemList = [
     title: "Google Maps",
     shortDesc: "Google Maps integration with react",
     gitUrl:
-      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/toast-notification",
+      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/google-map",
     link: "/react/google-maps",
     description: (
       <p>
@@ -48,7 +49,7 @@ const itemList = [
         dolor cum fugit dicta libero dignissimos facilis eum?
       </p>
     ),
-    img: toast,
+    img: map,
   },
 ];
 

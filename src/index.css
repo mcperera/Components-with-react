@@ -65,3 +65,16 @@
   font-weight: 500;
   border-bottom: 1px solid black;
 }
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
