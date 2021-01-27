@@ -1,7 +1,7 @@
 import React from "react";
 
 import { MainContainer } from "../../../components";
-import { CircularLoader, BarLoader, TextLoader } from "./index";
+import { CircularLoader, BarLoader, TextLoader } from "../index";
 
 import { loaderMain, expandTitle } from "./Loader.module.css";
 
