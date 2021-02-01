@@ -51,6 +51,29 @@ const itemList = [
     ),
     img: map,
   },
+  {
+    id: 3,
+    title: "Search 🔍",
+    shortDesc: "Basic search component with search suggestions",
+    gitUrl:
+      "https://github.com/mcperera/Components-with-react/tree/master/src/_projects/react_components/Search",
+    link: "/react/search",
+    description: (
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Necessitatibus, totam numquam. Itaque atque aspernatur ipsa laboriosam
+        accusamus odit autem, error vel nam dolor cum fugit dicta libero
+        dignissimos facilis eum? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Necessitatibus, totam numquam. <br /> Itaque atque
+        aspernatur ipsa laboriosam accusamus odit autem, error vel nam dolor cum
+        fugit dicta libero dignissimos facilis eum? Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Necessitatibus, totam numquam. Itaque
+        atque aspernatur ipsa laboriosam accusamus odit autem, error vel nam
+        dolor cum fugit dicta libero dignissimos facilis eum?
+      </p>
+    ),
+    img: map,
+  },
 ];
 
 function ReactCompo() {
