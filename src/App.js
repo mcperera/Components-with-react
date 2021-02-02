@@ -5,7 +5,11 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import { Login, Home, ReactCompo, CssCompo } from "./pages";
 import { Dashboard } from "./components";
 
-import { ToastNotification, GoogleMap } from "./_projects/react_components";
+import {
+  ToastNotification,
+  GoogleMap,
+  Search,
+} from "./_projects/react_components";
 import { Loaders } from "./_projects/css_components/index";
 
 import "./App.css";
@@ -43,6 +47,11 @@ function App() {
         <ProtectedRoute exact path={"/react/google-maps"}>
           <Dashboard>
             <GoogleMap />
+          </Dashboard>
+        </ProtectedRoute>
+        <ProtectedRoute exact path={"/react/search"}>
+          <Dashboard>
+            <Search />
           </Dashboard>
         </ProtectedRoute>
       </Switch>
