@@ -19,7 +19,9 @@ function Search() {
     event.preventDefault();
     console.log("log ", event.target.value);
     setSearchValue(event.target.value);
-    fetch(`${rootURL}/search/${event.target.value}`)
+    fetch(
+      `https://components-mc.netlify.app/${rootURL}/search/${event.target.value}`
+    )
       .then((res) => res.json())
       .then((result) => {
         console.log("result ", result);
