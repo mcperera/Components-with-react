@@ -20,12 +20,11 @@
   justify-content: center;
   align-items: center;
 
-  height: 100%;
+  height: calc(100vh - 215px);
   width: 100%;
-  padding: 10px;
 }
 
-form {
+.searchContainer > form {
   height: max-content;
   width: 40%;
 }
@@ -60,9 +59,8 @@ form {
   justify-items: center;
 
   height: 100%;
-  width: 50%;
-  margin-top: 15px;
-  padding: 25px;
+  width: 80%;
+  margin-top: 10px;
 
   overflow: auto;
 }
@@ -78,7 +76,7 @@ form {
   align-items: center;
 
   height: max-content;
-  width: 70%;
+  width: 40%;
   margin: 10px;
   padding: 20px;
   text-align: center;
@@ -104,10 +102,13 @@ form {
 }
 
 @media screen and (max-width: 480px) {
-  form {
+  .searchContainer > form {
     width: 80%;
   }
   .searchContent {
     width: 100%;
+  }
+  .card {
+    width: 90%;
   }
 }
