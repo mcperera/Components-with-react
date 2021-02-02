@@ -55,12 +55,59 @@ form {
 }
 
 .searchContent {
+  display: grid;
+  grid-auto-columns: 1fr;
+  justify-items: center;
+
   height: 100%;
   width: 50%;
   margin-top: 15px;
   padding: 25px;
+
+  overflow: auto;
 }
 
 .searchContent > p {
   text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: max-content;
+  width: 70%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+}
+
+.card > h1 {
+  font-size: 15px;
+}
+
+.card > img {
+  height: 150px;
+}
+
+.card > p {
+  font-size: 10px;
+}
+
+.card > span {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    width: 80%;
+  }
+  .searchContent {
+    width: 100%;
+  }
 }
